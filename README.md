@@ -1,1 +1,1 @@
-# tpsit-an.github.io
+# tpsit.github.io

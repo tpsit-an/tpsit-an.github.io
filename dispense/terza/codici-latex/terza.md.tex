@@ -1,0 +1,156 @@
+\hypertarget{numeri-interi-modulo-e-segno}{%
+\paragraph{Numeri interi (modulo e
+segno)}\label{numeri-interi-modulo-e-segno}}
+
+Abbiamo il numero \(125\).
+
+Cambio di rappresentazione umano:
+
+\begin{itemize}
+\item
+  da base 10 a base 2: \(125_{10}=1111101_{2}\).
+\item
+  da base 10 a base 8: \(125_{10}=175_{8}\).
+\item
+  da base 2 a base 16: \(1111101_{2}=7D_{16}\).
+\end{itemize}
+
+Codifica per l'utilizzo con un calcolatore a 16 bit (modulo e segno):
+
+\begin{itemize}
+\tightlist
+\item
+  da base 10 a base 2: \(+125 \rightarrow 0000000001111101_{2}\);
+  \quad \(-125 \rightarrow 1000000001111101_{2}\).
+\end{itemize}
+
+Cambio di rappresentazione del codice di cui sopra:
+
+\begin{itemize}
+\item
+  da base 2 a base 16: \(0000000001111101_{2}=007D_{16}\);
+  \quad \(1000000001111101_{2}=807D_{16}\).
+\item
+  da base 2 a base 8: \(0000000001111101_{2}=000175_{8}\);
+  \quad \(1000000001111101_{2}=100175_{8}\).
+\end{itemize}
+
+\emph{attenzione:} quando si cambia la rappresentazione del codice, non
+bisogna mai dimenticare lo \emph{scopo} (rappresentare su 16 bit in
+modulo e segno):
+
+\begin{itemize}
+\item
+  lo riporto in binario (mantenendo 16 bit): ritorna esattamente lo
+  stesso.
+\item
+  lo riporto in binario dall'ottale: ottengo 18 bit (6 cifre ottali),
+  quindi devo scartare i 2 bit in più a sinistra e mantenere solo i 16
+  bit meno significativi.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{numeri-interi-complemento-a-1}{%
+\paragraph{Numeri interi (complemento a
+1)}\label{numeri-interi-complemento-a-1}}
+
+Abbiamo il numero \(125\).
+
+Cambio di rappresentazione umano:
+
+\begin{itemize}
+\item
+  da base 10 a base 2: \(125_{10}=1111101_{2}\).
+\item
+  da base 10 a base 8: \(125_{10}=175_{8}\).
+\item
+  da base 2 a base 16: \(1111101_{2}=7D_{16}\).
+\end{itemize}
+
+Codifica per l'utilizzo con un calcolatore a 16 bit (complemento a 1):
+
+\begin{itemize}
+\tightlist
+\item
+  da base 10 a base 2: \(+125 \rightarrow 0000000001111101_{2}\); \quad
+  \(-125 \rightarrow \overline{0000000001111101}_{2}=1111111110000010_{2}\).
+\end{itemize}
+
+Cambio di rappresentazione del codice di cui sopra:
+
+\begin{itemize}
+\item
+  da base 2 a base 16: \(0000000001111101_{2}=007D_{16}\);
+  \quad \(1111111110000010_{2}=FF82_{16}\).
+\item
+  da base 2 a base 8: \(0000000001111101_{2}=000175_{8}\);
+  \quad \(1111111110000010_{2}=177602_{8}\).
+\end{itemize}
+
+\emph{attenzione:} quando si cambia la rappresentazione del codice, non
+bisogna mai dimenticare lo \emph{scopo} (rappresentare su 16 bit in
+complemento a 1):
+
+\begin{itemize}
+\item
+  lo riporto in binario (mantenendo 16 bit): ritorna esattamente lo
+  stesso.
+\item
+  lo riporto in binario dall'ottale: ottengo 18 bit (6 cifre ottali),
+  quindi devo scartare i 2 bit in più a sinistra e mantenere solo i 16
+  bit meno significativi.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{numeri-interi-complemento-a-2}{%
+\paragraph{Numeri interi (complemento a
+2)}\label{numeri-interi-complemento-a-2}}
+
+Abbiamo il numero \(125\).
+
+Cambio di rappresentazione umano:
+
+\begin{itemize}
+\item
+  da base 10 a base 2: \(125_{10}=1111101_{2}\).
+\item
+  da base 10 a base 8: \(125_{10}=175_{8}\).
+\item
+  da base 2 a base 16: \(1111101_{2}=7D_{16}\).
+\end{itemize}
+
+Codifica per l'utilizzo con un calcolatore a 16 bit (complemento a 2):
+
+\begin{itemize}
+\tightlist
+\item
+  da base 10 a base 2: \(+125 \rightarrow 0000000001111101_{2}\); \quad
+  \(-125 \rightarrow \left(\overline{0000000001111101}_{2}+1\right)=1111111110000011_{2}\).
+\end{itemize}
+
+Cambio di rappresentazione del codice di cui sopra:
+
+\begin{itemize}
+\item
+  da base 2 a base 16: \(0000000001111101_{2}=007D_{16}\);
+  \quad \(1111111110000011_{2}=FF83_{16}\).
+\item
+  da base 2 a base 8: \(0000000001111101_{2}=000175_{8}\);
+  \quad \(1111111110000011_{2}=177603_{8}\).
+\end{itemize}
+
+\emph{attenzione:} quando si cambia la rappresentazione del codice, non
+bisogna mai dimenticare lo \emph{scopo} (rappresentare su 16 bit in
+complemento a 2):
+
+\begin{itemize}
+\item
+  lo riporto in binario (mantenendo 16 bit): ritorna esattamente lo
+  stesso.
+\item
+  lo riporto in binario dall'ottale: ottengo 18 bit (6 cifre ottali),
+  quindi devo scartare i 2 bit in più a sinistra e mantenere solo i 16
+  bit meno significativi.
+\end{itemize}

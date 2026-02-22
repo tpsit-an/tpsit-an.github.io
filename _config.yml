@@ -1,0 +1,9 @@
+title: TPSIT
+description: Dispense TPSIT
+theme: minima
+minima:
+  skin: solarized
+  nav_pages:
+    - index.md
+sass:
+  quiet_deps: true

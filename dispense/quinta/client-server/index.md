@@ -1,3 +1,9 @@
+---
+layout: page
+title: Architettura client-server
+permalink: /dispense/quinta/client-server/
+---
+
 # Architettura client-server: implementazione fisica.
 
 ## Livelli e tier

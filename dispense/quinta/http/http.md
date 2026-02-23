@@ -19,13 +19,18 @@ permalink: /dispense/quinta/http/http/
 È utile avere un'idea generale di ciò che avviene durante una comunicazione in rete. In questo capitolo approfondiremo il protocollo `HTTP` del livello *applicazione*. Appartenendo al livello più alto dello stack a quattro livelli, <u>per ogni</u> <u>comunicazione</u> operano *"al di sotto"* del livello *applicazione* altri tre livelli. Questo significa che in una comunicazione concreta ciascun livello utilizza un protocollo specifico utilizzando meccanismi di identificazione propri. Questo si traduce nella pratica in un pacchetto di byte composto nel seguente modo:
 
 ```
-   PHYSICAL layer          NETWORK layer             TRANSPORT layer
-   (Ethernet)              (IP)                      (TCP)
-  ├──────────────────────┼────────────────────────┼──────────────────────┤
-   EC 02 73 D0 CF 00      45 00 00 28 8A F2 40      B1 E4 01 BB 47 7D
-   10 E1 8E 46 2B 4E      00 40 06 10 2D 0A C8      41 97 20 91 E6 79
-   08 00                   A0 F9 B9 0F 3A E0         50 10 02 21 9F CB
-                                                     00 00
+   PHYSICAL header      NETWORK header       TRANSPORT header       TRANSPORT content
+   (Ethernet)           (IP)                 (TCP)
+  ├───────────────────┼──────────────────┼────────────────────┼──────────────────────┤
+   EC 02 73 ...        45 00 00 ...       B1 E4 01 ...        GET / HTTP/1.1 ...
+  ├───────────────────┼──────────────────┼────────────────────┼──────────────────────┤
+       14 byte              20 byte              20 byte             variabile
+                      ╰──────────────────────────────────────────────────────────────╯
+                                        contenuto di PHYSICAL
+                                      ╰─────────────────────────────────────────────╯
+                                                     contenuto di NETWORK
+                                                                          ╰──────────╯
+                                                                    contenuto di TCP
 ```
 
 Dove nel caso del protocollo `HTTP` i protocolli usati sono i seguenti, con relativi *target* e relativa *codifica*:
@@ -40,10 +45,9 @@ Dove nel caso del protocollo `HTTP` i protocolli usati sono i seguenti, con rela
  NETWORK         │ IP                  │ IP address / host
                  │ (Internet Protocol) │
 ─────────────────┼─────────────────────┼─────────────────────────────
- PHYSICAL        │ Ethernet, Wifi      │ MAC address / nodo di rete¹
+ PHYSICAL        │ Ethernet, Wifi      │ MAC address / nodo di reteª
 ```
-
-¹ Come una Network Interface Card (NIC), ovvero la scheda di rete.
+ª Come una Network Interface Card (NIC), ovvero la scheda di rete.
 
 Come si può notare dallo stack, il target del protocollo indica il tipo di obbiettivo che ogni protocollo ha in una comunicazione. Nel protocollo `TCP` l'obbiettivo è un altro *endpoint*, nel protocollo `IP` un altro *host*, nel protocollo `HTTP` invece l'obbiettivo è una *risorsa*.
 

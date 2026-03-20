@@ -13,7 +13,6 @@ theme:
     code: JetBrains Mono
   features:
     - navigation.sections
-    - navigation.expand
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
@@ -91,7 +90,9 @@ nav:
       - Multimediali:
         - Immagini: terza/codici/multimediale/immagini.md
   - Quinta:
-    - BigPicture: quinta/big-picture/index.md
+    - BigPicture:
+      - quinta/big-picture/index.md
+      - Esempio: quinta/big-picture/esempio.md
     - Architettura client-server: quinta/client-server/index.md
     - HTTP:
       - quinta/http/index.md

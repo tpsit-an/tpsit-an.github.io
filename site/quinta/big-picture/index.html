@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduzione" class="md-skip">
+        <a href="#bigpicture" class="md-skip">
           Vai al contenuto
         </a>
       
@@ -851,6 +851,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -893,23 +895,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduzione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduzione
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#servizio" class="md-nav__link">
@@ -930,34 +923,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Ciclo di comunicazione HTTP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lato-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lato client
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lato-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lato server
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1198,23 +1163,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Indice
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduzione" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduzione
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#servizio" class="md-nav__link">
@@ -1235,34 +1191,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Ciclo di comunicazione HTTP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lato-client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lato client
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lato-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lato server
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1344,49 +1272,124 @@
 
 
 
-  <h1>BigPicture</h1>
-
-<h2 id="introduzione">Introduzione</h2>
+<h1 id="bigpicture">BigPicture</h1>
 <p>I tre argomenti principali di quest'anno:</p>
-<ul>
-<li>Thread.</li>
-<li>Socket.</li>
-<li>Protocollo HTTP.</li>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Thread</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Socket</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>Protocollo <abbr title="HyperText Transfer Protocol">HTTP</abbr></strong></li>
 </ul>
 <p>Sono strumenti indispensabili per il funzionamento di qualsiasi servizio.</p>
+<hr />
 <h2 id="servizio">Servizio</h2>
-<p>Con servizio si intende che un operatore connesso alla rete, detto <strong>server</strong>, ascolta <em>richieste</em> da operatori, detti <strong>client</strong>, i quali vogliono usufruire del servizio predisposto dal <strong>server</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Definizione</p>
+<p>Con <strong>servizio</strong> si intende che un operatore connesso alla rete, detto <strong>server</strong>, ascolta <em>richieste</em> da operatori, detti <strong>client</strong>, i quali vogliono usufruire del servizio predisposto dal <strong>server</strong>.</p>
+</div>
 <p>La comunicazione tra <em>ciascun</em> <strong>client</strong> ed il <strong>server</strong> è univoca, ovvero il <strong>server</strong> ha tante connessioni aperte contemporaneamente quanti sono i <strong>client</strong> di cui vuole soddisfare la <strong>richiesta</strong>.</p>
-<h2 id="ciclo-di-comunicazione-http">Ciclo di comunicazione HTTP</h2>
-<p>Ricapitoliamo un <strong>ciclo di comunicazione HTTP</strong>.</p>
-<p>Tutto inizia dal client, il quale richiede al server di effettuare un'operazione sulla risorsa indicata dall'URL.</p>
-<h3 id="lato-client">Lato client</h3>
-<ul>
-<li>(<code>c1</code>) Il client genera la richiesta HTTP.</li>
-<li>(<code>c2</code>) Il client si connette al server tramite protocollo TCP.</li>
-<li>(<code>c3</code>) Il client invia la richiesta e attende la risposta.</li>
-<li>(<code>c4</code>) Il client riceve la risposta dal server.</li>
-<li>(<code>c5</code>) Il client elabora la risposta.</li>
-</ul>
-<h3 id="lato-server">Lato server</h3>
-<ul>
-<li>(<code>s1</code>) Il server è già in ascolto di eventuali connessioni in ingresso.</li>
-<li>(<code>s2</code>) Il server riceve la connessione del punto (<code>c2</code>) e la accetta.</li>
-<li>(<code>s3</code>) Il server riceve la richiesta inviata in (<code>c3</code>).</li>
-<li>(<code>s4</code>) Il server effettua i controlli su di essa (validazione, esistenza, autorizzazione).</li>
-<li>(<code>s5</code>) Il server elabora la richiesta producendo una risposta.</li>
-<li>(<code>s6</code>) Il server invia la risposta al client il quale la riceve in (<code>c4</code>).</li>
-</ul>
+<pre class="mermaid"><code>graph LR
+  C1[Client 1] --&gt;|richiesta| S[Server]
+  C2[Client 2] --&gt;|richiesta| S
+  C3[Client 3] --&gt;|richiesta| S
+  S --&gt;|risposta| C1
+  S --&gt;|risposta| C2
+  S --&gt;|risposta| C3</code></pre>
+<hr />
+<h2 id="ciclo-di-comunicazione-http">Ciclo di comunicazione <abbr title="HyperText Transfer Protocol">HTTP</abbr></h2>
+<p>Ricapitoliamo un <strong>ciclo di comunicazione <abbr title="HyperText Transfer Protocol">HTTP</abbr></strong>.</p>
+<p>Tutto inizia dal client, il quale richiede al server di effettuare un'operazione sulla risorsa indicata dall'<abbr title="Uniform Resource Locator">URL</abbr>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Lato client</label><label for="__tabbed_1_2">Lato server</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Operazione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c1</code></td>
+<td>Il client genera la richiesta <abbr title="HyperText Transfer Protocol">HTTP</abbr></td>
+</tr>
+<tr>
+<td><code>c2</code></td>
+<td>Il client si connette al server tramite protocollo <abbr title="Transmission Control Protocol">TCP</abbr></td>
+</tr>
+<tr>
+<td><code>c3</code></td>
+<td>Il client invia la richiesta e attende la risposta</td>
+</tr>
+<tr>
+<td><code>c4</code></td>
+<td>Il client riceve la risposta dal server</td>
+</tr>
+<tr>
+<td><code>c5</code></td>
+<td>Il client elabora la risposta</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Operazione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s1</code></td>
+<td>Il server è già in ascolto di eventuali connessioni in ingresso</td>
+</tr>
+<tr>
+<td><code>s2</code></td>
+<td>Il server riceve la connessione del punto <code>c2</code> e la accetta</td>
+</tr>
+<tr>
+<td><code>s3</code></td>
+<td>Il server riceve la richiesta inviata in <code>c3</code></td>
+</tr>
+<tr>
+<td><code>s4</code></td>
+<td>Il server effettua i controlli (validazione, esistenza, autorizzazione)</td>
+</tr>
+<tr>
+<td><code>s5</code></td>
+<td>Il server elabora la richiesta producendo una risposta</td>
+</tr>
+<tr>
+<td><code>s6</code></td>
+<td>Il server invia la risposta al client, che la riceve in <code>c4</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<pre class="mermaid"><code>sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C-&gt;&gt;S: connect (c2)
+    C-&gt;&gt;S: richiesta HTTP (c3)
+    S-&gt;&gt;S: validazione + elaborazione (s4, s5)
+    S-&gt;&gt;C: risposta HTTP (s6, c4)</code></pre>
+<hr />
 <h2 id="il-problema-della-concorrenza">Il problema della concorrenza</h2>
-<p>Poniamoci questa condizione:</p>
-<blockquote>
-<p>Il server è single-core.</p>
-</blockquote>
-<p>Questo significa che la CPU <strong>non</strong> può effettuare <strong>due o più</strong> operazioni contemporaneamente.</p>
-<p>Il rapporto client-server è un rapporto <strong>molti a uno</strong>: più client vogliono soddisfare la propria richiesta al server. Il server però rimane sempre uno soltanto.</p>
-<blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Condizione</p>
+<p>Il server è <strong>single-core</strong>.</p>
+</div>
+<p>Questo significa che la <abbr title="Central Processing Unit">CPU</abbr> <strong>non</strong> può effettuare <strong>due o più</strong> operazioni contemporaneamente.</p>
+<p>Il rapporto client-server è un rapporto <mark>molti a uno</mark>: più client vogliono soddisfare la propria richiesta al server. Il server però rimane sempre uno soltanto.</p>
+<div class="admonition question">
+<p class="admonition-title">Domanda</p>
 <p>Può un server single-core soddisfare più richieste contemporaneamente?</p>
-</blockquote>
+</div>
+<hr />
 <h2 id="esempio-due-client-un-server">Esempio: due client, un server</h2>
 <p>La situazione è la seguente: ci sono due client, <em>client-1</em> e <em>client-2</em>, che vogliono effettuare una richiesta al server <em>server-1</em>.</p>
 <h3 id="connessione-acceptconnect">Connessione (accept/connect)</h3>
@@ -1395,36 +1398,77 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">sp</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">sp</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">IP_SERVER</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">sp</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">sa</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span> <span class="c1"># bloccata</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">sa</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span> <span class="c1"># (1)!</span>
 </span></code></pre></div>
-<p>In quest'ultima operazione il server si blocca attendendo una connessione in ingresso.</p>
-<p>Il client <em>client-1</em> esegue la funzione <em>connect</em> la quale blocca tutto fin a quando il server non accetta la connessione:</p>
+<ol>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.47.22A.75.75 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.75.75 0 0 1-.22.53l-4.25 4.25A.75.75 0 0 1 11 16H5a.75.75 0 0 1-.53-.22L.22 11.53A.75.75 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4m0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg></span> <strong>Bloccante</strong> — il server si ferma qui in attesa di una connessione in ingresso.</li>
+</ol>
+<p>Il client <em>client-1</em> esegue la funzione <code>connect</code>:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># client-1</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">sock_client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">IP_SERVER</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span> <span class="c1"># bloccata</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">sock_client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">IP_SERVER</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span> <span class="c1"># (1)!</span>
 </span></code></pre></div>
-<p>La funzione <code>accept</code> si sblocca e ritorna un socket attivo <code>sa</code> connesso a <em>client-1</em>.</p>
+<ol>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.47.22A.75.75 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.75.75 0 0 1-.22.53l-4.25 4.25A.75.75 0 0 1 11 16H5a.75.75 0 0 1-.53-.22L.22 11.53A.75.75 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4m0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg></span> <strong>Bloccante</strong> — il client si ferma fin a quando il server non accetta la connessione.</li>
+</ol>
+<p>La funzione <code>accept</code> si sblocca e ritorna un socket attivo <code>sa</code> connesso a <em>client-1</em>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Server</label><label for="__tabbed_2_2">Client</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># server</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">sa</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span> <span class="c1"># si sblocca</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">sa</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span> <span class="c1"># ✓ si sblocca</span>
 </span></code></pre></div>
-<p>Lato client, lo sblocco della funzione <code>accept</code> <strong>equivale</strong> allo sblocco della funzione <code>connect</code> in <em>client-1</em>:</p>
+</div>
+<div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># client-1</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">sock_client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">IP_SERVER</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span> <span class="c1"># si sblocca</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">sock_client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">IP_SERVER</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span> <span class="c1"># ✓ si sblocca</span>
 </span></code></pre></div>
-<p>Quindi ora il socket <code>sa</code> nel server può scambiare pacchetti TCP con il socket <code>sock_client</code> nel client.</p>
+</div>
+</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Connessione stabilita</p>
+<p>Ora il socket <code>sa</code> nel server può scambiare pacchetti <abbr title="Transmission Control Protocol">TCP</abbr> con il socket <code>sock_client</code> nel client.</p>
+</div>
 <h3 id="scambio-dati-sendrecv">Scambio dati (send/recv)</h3>
-<p>Successivamente allo sblocco della <code>accept</code> nel server e della <code>connect</code> nel client-1 entrambi si ri-bloccano in:</p>
+<p>Successivamente, entrambi si ri-bloccano:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Client</label><label for="__tabbed_3_2">Server</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># client-1</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">sock_client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">IP_SERVER</span><span class="p">,</span> <span class="mi">443</span><span class="p">))</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">sock_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="c1"># ora si blocca qui</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">sock_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">)</span> <span class="c1"># (1)!</span>
 </span></code></pre></div>
+<ol>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.47.22A.75.75 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.75.75 0 0 1-.22.53l-4.25 4.25A.75.75 0 0 1 11 16H5a.75.75 0 0 1-.53-.22L.22 11.53A.75.75 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4m0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg></span> <strong>Bloccante</strong> — attende l'<code>ACK</code> dal server.</li>
+</ol>
+</div>
+<div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># server</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">sa</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">request</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">BS</span><span class="p">)</span> <span class="c1"># ora si blocca qui</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">request</span> <span class="o">=</span> <span class="n">sa</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="n">BS</span><span class="p">)</span> <span class="c1"># (1)!</span>
 </span></code></pre></div>
-<p>Quando il server riceve i dati inviati dalla <code>send</code> si sblocca. Lo sblocco del client invece avviene quando il client riceve l'<code>ACK</code> inviato dal server.</p>
-<p><img alt="Le frecce sono inclinate in quanto tengono conto del tempo di trasmissione." src="send-recv.svg" /></p>
+<ol>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.47.22A.75.75 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.75.75 0 0 1-.22.53l-4.25 4.25A.75.75 0 0 1 11 16H5a.75.75 0 0 1-.53-.22L.22 11.53A.75.75 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.5 5.31v5.38l3.81 3.81h5.38l3.81-3.81V5.31L10.69 1.5ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4m0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg></span> <strong>Bloccante</strong> — attende i dati dal client.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>Quando il server riceve i dati inviati dalla <code>send</code>, la <code>recv</code> si sblocca. Lo sblocco del client avviene quando riceve l'<code>ACK</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> dal server.</p>
+<figure>
+  <img alt="send e recv TCP" src="send-recv.svg" width="80%" />
+<br />
+<figcaption>Le frecce sono inclinate in quanto tengono conto del tempo di trasmissione.</figcaption>
+</figure>
 <h3 id="elaborazione-della-richiesta">Elaborazione della richiesta</h3>
-<p>Ora il server effettua le operazioni sulla richiesta, mentre <em>client-1</em> non fa nulla, aspetta la risposta.</p>
+<p>Ora il server effettua le operazioni sulla richiesta, mentre <em>client-1</em> non fa nulla — aspetta la risposta.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>L'<strong><abbr title="Acknowledgment">ACK</abbr></strong> (acknowledgment) è un pacchetto <abbr title="Transmission Control Protocol">TCP</abbr> inviato automaticamente dal kernel per confermare la ricezione dei dati.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 

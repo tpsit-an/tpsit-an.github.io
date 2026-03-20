@@ -57,11 +57,12 @@ Tutto inizia dal client, il quale richiede al server di effettuare un'operazione
     | `s6` | Il server invia la risposta al client, che la riceve in `c4` |
 
 ``` mermaid
+%%{init: {'sequence': {'actorMargin': 300}} }%%
 sequenceDiagram
     participant C as Client
     participant S as Server
-    Note over C: genera richiesta HTTP (c1)
     Note over S: in ascolto (s1)
+    Note over C: genera richiesta HTTP (c1)
     Note over C: connect (c2)
     C->>S: TCP connect
     Note over S: accept (s2)
@@ -79,7 +80,7 @@ sequenceDiagram
 
 ---
 
-## Il problema della concorrenza
+## Più client, un solo server
 
 !!! warning "Condizione"
     Il server è **single-core**.
@@ -89,7 +90,12 @@ Questo significa che la CPU **non** può effettuare **due o più** operazioni co
 Il rapporto client-server è un rapporto ==molti a uno==: più client vogliono soddisfare la propria richiesta al server. Il server però rimane sempre uno soltanto.
 
 !!! question "Domanda"
-    Può un server single-core soddisfare più richieste contemporaneamente?
+    Può un server ==single-core== soddisfare più richieste contemporaneamente?
+
+Per capirlo vedremo degli esempi:
+
+- [Un client, un server.](es1_scst.md)
+- [Due client, un server.](es2_scst.md)
 
 *[TCP]: Transmission Control Protocol
 *[HTTP]: HyperText Transfer Protocol

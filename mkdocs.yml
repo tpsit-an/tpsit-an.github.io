@@ -1,6 +1,7 @@
 site_name: Dispense
 site_description: Dispense scolastiche
-
+watch:
+  - docs
 theme:
   name: material
   language: it
@@ -12,7 +13,11 @@ theme:
     text: JetBrains Mono
     code: JetBrains Mono
   features:
+    - toc.integrate
+    - navigation.tabs
     - navigation.sections
+    - navigation.expand
+    - navigation.prune
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
@@ -69,6 +74,10 @@ markdown_extensions:
   # Tooltips
   - abbr
 
+extra:
+  mermaid:
+    theme: dark
+
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
@@ -90,10 +99,12 @@ nav:
       - Multimediali:
         - Immagini: terza/codici/multimediale/immagini.md
   - Quinta:
-    - BigPicture:
-      - quinta/big-picture/index.md
-      - Esempio: quinta/big-picture/esempio.md
-    - Architettura client-server: quinta/client-server/index.md
+    - Thread, Socket e HTTP:
+      - Introduzione: quinta/big-picture/index.md
+      - Un client, un server: quinta/big-picture/es1_scst.md
+      - Due client, un server: quinta/big-picture/es2_scst.md
+    - Architettura client-server:
+       - Tiers: quinta/client-server/index.md
     - HTTP:
       - quinta/http/index.md
       - HTTP dettaglio: quinta/http/http.md

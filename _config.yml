@@ -1,9 +1,0 @@
-title: Dispense
-description: Dispense scolastiche
-theme: minima
-minima:
-  skin: solarized
-  nav_pages:
-    - index.md
-sass:
-  quiet_deps: true

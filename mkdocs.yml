@@ -1,0 +1,98 @@
+site_name: Dispense
+site_description: Dispense scolastiche
+
+theme:
+  name: material
+  language: it
+  palette:
+    scheme: slate
+    primary: teal
+    accent: amber
+  font:
+    text: JetBrains Mono
+    code: JetBrains Mono
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  icon:
+    admonition:
+      note: octicons/tag-16
+
+markdown_extensions:
+  # Admonitions & collapsable
+  - admonition
+  - pymdownx.details
+  # Code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets
+  # Content tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Tables
+  - tables
+  # Footnotes
+  - footnotes
+  # Formatting (highlight, sub, sup, keyboard keys, critic markup)
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  # Lists (task lists)
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Images, grids, buttons, annotations
+  - attr_list
+  - md_in_html
+  # Icons & emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Math
+  - pymdownx.arithmatex:
+      generic: true
+  # Tooltips
+  - abbr
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Terza:
+    - Codifica:
+      - terza/codici/index.md
+      - Introduzione: terza/codici/codici-introduzione.md
+      - Definizione di codice: terza/codici/codici-codice.md
+      - Numeri con segno: terza/codici/codici-segno.md
+      - "Conversione base 10\u21922": terza/codici/codici-conversione.md
+      - Codifica: terza/codici/codifica.md
+      - Testuali:
+        - Codifiche testuali: terza/codici/testuale/ascii.md
+        - Codepoint: terza/codici/testuale/codepoint.md
+        - ASCII: terza/codici/testuale/codifica-ascii.md
+        - UTF-8: terza/codici/testuale/utf8.md
+      - Multimediali:
+        - Immagini: terza/codici/multimediale/immagini.md
+  - Quinta:
+    - BigPicture: quinta/big-picture/index.md
+    - Architettura client-server: quinta/client-server/index.md
+    - HTTP:
+      - quinta/http/index.md
+      - HTTP dettaglio: quinta/http/http.md

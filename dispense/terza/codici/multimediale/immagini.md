@@ -33,3 +33,43 @@ Un'immagine bitmap da 10 megapixel occupa circa:
 > 10 MP × 3 byte per pixel = 30 MB
 
 Questa dimensione è spesso troppo grande per l'archiviazione e la trasmissione. Per questo è necessaria una codifica compressa come **JPEG**, che riduce significativamente la dimensione del file sacrificando parte della qualità visiva (compressione con perdita).
+
+
+## PPI/DPI (monitor vs stampa)
+
+Inch = 2.54cm.
+
+Video → Framerate.
+
+Audio → campioni x bit per frequenza
+→ stereo x2.
+
+# RGB / CMYK (luce emessa vs riflessa)
+
+uint8 immagine[H][W][3];
+
+## opacità +1
+
+# Video
+
+## FPS
+
+1000 fps:
+
+- 1 s → 10 s.
+- 1000fps → 100 fps.
+
+
+# Audio
+
+Sequenza di campioni.
+
+Campione rappresentazione di un insieme.
+
+Infiniti istanti, se ne prende uno.
+
+44kHz → 44 mila campioni.
+
+## Array mono-dimensionale
+
+MONO vs STEREO.

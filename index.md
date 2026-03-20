@@ -18,3 +18,4 @@ title: Home
 
 - [Architettura client-server](/dispense/quinta/client-server/)
 - [HTTP](/dispense/quinta/http/)
+- [BigPicture](/dispense/quinta/big-picture/)

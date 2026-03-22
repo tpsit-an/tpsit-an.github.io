@@ -15,12 +15,13 @@ theme:
   features:
     - toc.integrate
     - navigation.tabs
-    - navigation.sections
     - navigation.expand
     - navigation.prune
+    - navigation.indexes
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
+    - content.footnote.tooltips
     - navigation.top
     - search.suggest
     - search.highlight
@@ -101,8 +102,15 @@ nav:
   - Quinta:
     - Thread, Socket e HTTP:
       - Introduzione: quinta/big-picture/index.md
-      - Un client, un server: quinta/big-picture/es1_scst.md
-      - Due client, un server: quinta/big-picture/es2_scst.md
+      - Thread - Linea di esecuzione:
+        - Linea di esecuzione: quinta/big-picture/1.linea.md
+        - "Prevedibilità della linea di esecuzione": quinta/big-picture/2.prevedibilità.md
+        - I thread e la linea di esecuzione: quinta/big-picture/3.linea_thread.md
+        - Linee di esecuzione multiple: quinta/big-picture/4.Linee di esecuzione multiple.md
+        - Un client, un server: quinta/big-picture/es1_scst.md
+        - Due client, un server: quinta/big-picture/es2_scst.md
+      - Socket - Operazioni I/O:
+        - Introduzione: quinta/big-picture/io/index.md
     - Architettura client-server:
        - Tiers: quinta/client-server/index.md
     - HTTP:

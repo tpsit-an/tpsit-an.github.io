@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPSIT - Dispense</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #009688;
+    }
+    p.subtitle {
+      margin-bottom: 3rem;
+      color: #888;
+    }
+    .cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: #16213e;
+      border: 2px solid #009688;
+      border-radius: 12px;
+      padding: 2.5rem 3rem;
+      text-decoration: none;
+      color: #e0e0e0;
+      transition: all 0.3s;
+      text-align: center;
+      min-width: 220px;
+    }
+    .card:hover {
+      border-color: #ffc107;
+      background: #1a1a2e;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255, 193, 7, 0.15);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>TPSIT</h1>
+  <p class="subtitle">Dispense scolastiche</p>
+  <div class="cards">
+    <a href="/tpsit-terza/" class="card">
+      <h2>Terza</h2>
+      <p>Codifica, Sistemi Operativi</p>
+    </a>
+    <a href="/tpsit-quinta/" class="card">
+      <h2>Quinta</h2>
+      <p>Thread, Socket, HTTP</p>
+    </a>
+  </div>
+</body>
+</html>
